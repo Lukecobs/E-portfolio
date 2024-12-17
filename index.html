@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Luke Cobrado</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Luke <span>Cobrado</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#" onclick="showSection('home')">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#" onclick="showSection('about')">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#" onclick="showSection('skills')">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#" onclick="showSection('contact')">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#" onclick="showSection('home')">Home</a>
+                <a href="#" onclick="showSection('about')">About</a>
+                <a href="#" onclick="showSection('skills')">Skills</a>
+                <a href="#" onclick="showSection('contact')">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="section">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="Main.png" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Luke</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a Computer Science Student.<span class="typewriter-text"></span></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I am a student at USTP, i also like manga, manhwas, and games</p>
+            
+            </div>
+
+
+        </div>
+    </section>
+    <section id="about" class="section" style="display: none;">
+        <div class="main-container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-item">
+                    <h3>Background</h3>
+                    <p>I live in Sugbongcogon Misamis Oriental, but currently i am staying at my aunt's home located in lomboy indahag cagayan de oro city. I'm currenty a student at University of Science and Technology of Southern Philippines.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Interests</h3>
+                    <p>I like playing games like helldivers and monster hunter. i also read comic books, manga and manhwas.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Skills</h3>
+                    <p>I have a brief experience in 3D arts and making games at unity. I also have a short experience in c++, python, javascript, css and javascript.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section" style="display: none;">
+        <div class="main-container">
+            <div class="skills-content">
+                <div class="skill-item">
+                    <img src="Blender.png" alt="Skill 1">
+                    <p>3D Modeling with Blender</p>
+                    <p>I have some experience with 3d modeling on blender. the photo above is some of my projects made. </p>
+                </div>
+                <div class="skill-item">
+                    <img src="TowerDefenseGame.png" alt="Skill 2">
+                    <p>Game Development</p>
+                    <p>This is my first time experience with unity and game making</p>
+                </div>
+                <div class="skill-item">
+                    <img src="Research.png" alt="Skill 3">
+                    <p>Research and Analysis</p>
+                    <p>A Research and Analysis about about combining a modified searching method and a sorting method for a fast search sort algorithm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="display: none;">
+        <div class="main-container">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>cobrado.lukelouise123@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p>+63 945 137 0250</p>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/luke-louise-cobrado-33445b336/" target="_blank"> Luke Louise Cobrado</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/Lukecobs" target="_blank">Luke Cobs</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+
+      function showSection(sectionId) {
+          document.querySelectorAll('.section').forEach(section => {
+              section.style.display = 'none';
+          });
+          document.getElementById(sectionId).style.display = 'block';
+      }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
